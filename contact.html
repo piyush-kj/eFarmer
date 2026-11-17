@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — eFarmer</title>
+  <meta name="description" content="Contact the eFarmer team for help with listing your crop or dealer verification.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><span class="brand-mark">eF</span> eFarmer</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="market.html">Marketplace</a>
+        <a href="sell.html">Sell Crop</a>
+        <a href="dealers.html">Dealers</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">We are here to help</span>
+        <h1>Contact us</h1>
+        <p>Question about a listing, a dealer or a payment? Send us a message and we will reply within a day.</p>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container grid-2" style="align-items:start">
+
+        <div class="form-card">
+          <div class="alert" id="contactAlert"></div>
+
+          <form id="contactForm" novalidate>
+            <div class="field">
+              <label for="cname">Your name</label>
+              <input type="text" id="cname" placeholder="Your full name" required>
+            </div>
+            <div class="field">
+              <label for="cemail">Email or mobile</label>
+              <input type="text" id="cemail" placeholder="you@example.com" required>
+            </div>
+            <div class="field">
+              <label for="cmessage">Message</label>
+              <textarea id="cmessage" placeholder="Tell us what you need help with..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send message</button>
+            <p class="form-note" style="margin-top:12px">
+              This demo has no server, so the form opens your email app instead.
+            </p>
+          </form>
+        </div>
+
+        <div>
+          <img src="images/wheat-hand.jpg" alt="Hand holding harvested wheat"
+               style="border-radius:16px;margin-bottom:22px;box-shadow:var(--shadow)">
+          <h2 style="font-size:1.2rem">Reach us directly</h2>
+          <p class="form-note">
+            Helpline: 1800 000 0000 (9 am to 7 pm, Monday to Saturday)<br>
+            Email: hello@efarmer.example<br>
+            Office: Krishi Bhavan Road, Indore, Madhya Pradesh 452001
+          </p>
+          <h2 style="font-size:1.2rem;margin-top:22px">Common questions</h2>
+          <p class="form-note" style="margin-bottom:10px">
+            <strong>Is listing free?</strong><br>
+            Yes. Farmers never pay to list a crop.
+          </p>
+          <p class="form-note" style="margin-bottom:10px">
+            <strong>Who sets the price?</strong><br>
+            The farmer does. Dealers can negotiate on the phone.
+          </p>
+          <p class="form-note">
+            <strong>Do you handle payment?</strong><br>
+            Not yet. Payment happens directly between farmer and dealer.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>&copy; <span id="year">2026</span> eFarmer &middot; A student demo project built with HTML, CSS and JavaScript.</div>
+      <nav>
+        <a href="market.html">Marketplace</a>
+        <a href="sell.html">Sell</a>
+        <a href="dealers.html">Dealers</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

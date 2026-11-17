@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketplace — eFarmer</title>
+  <meta name="description" content="Browse grain and pulse listings from verified dealers and wholesalers across India.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><span class="brand-mark">eF</span> eFarmer</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="market.html" class="active">Marketplace</a>
+        <a href="sell.html">Sell Crop</a>
+        <a href="dealers.html">Dealers</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Live listings</span>
+        <h1>Marketplace</h1>
+        <p>Buying requirements posted by verified dealers and wholesalers. Prices are per quintal.</p>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container">
+
+        <!-- Filters -->
+        <div class="filters">
+          <input type="search" id="searchInput" placeholder="Search crop, dealer or city..." aria-label="Search listings">
+          <select id="cropSelect" aria-label="Filter by crop">
+            <option value="">All crops</option>
+          </select>
+          <select id="stateSelect" aria-label="Filter by state">
+            <option value="">All states</option>
+          </select>
+          <button id="resetBtn" class="btn btn-outline">Reset</button>
+        </div>
+
+        <p class="result-line" id="resultLine">Loading...</p>
+
+        <div class="product-grid" id="productGrid"></div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Dealer popup -->
+  <div class="modal-backdrop" id="dealerModal">
+    <div class="modal">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <h3>Dealer details</h3>
+      <p class="form-note">Call the dealer directly and mention eFarmer.</p>
+      <dl>
+        <dt>Crop</dt><dd id="mCrop">-</dd>
+        <dt>Dealer</dt><dd id="mDealer">-</dd>
+        <dt>Location</dt><dd id="mPlace">-</dd>
+        <dt>Quantity</dt><dd id="mQty">-</dd>
+        <dt>Rate</dt><dd id="mPrice">-</dd>
+        <dt>Phone</dt><dd id="mPhone">-</dd>
+      </dl>
+      <a href="contact.html" class="btn btn-primary btn-block">Send an enquiry</a>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>&copy; <span id="year">2026</span> eFarmer &middot; A student demo project built with HTML, CSS and JavaScript.</div>
+      <nav>
+        <a href="market.html">Marketplace</a>
+        <a href="sell.html">Sell</a>
+        <a href="dealers.html">Dealers</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell your crop — eFarmer</title>
+  <meta name="description" content="List your grain on eFarmer for free and get direct offers from verified dealers.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><span class="brand-mark">eF</span> eFarmer</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="market.html">Marketplace</a>
+        <a href="sell.html" class="active">Sell Crop</a>
+        <a href="dealers.html">Dealers</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Free listing</span>
+        <h1>Sell your crop</h1>
+        <p>Fill this short form. Your listing is saved on your device and shown to dealers in the marketplace.</p>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container grid-2" style="align-items:start">
+
+        <!-- Form -->
+        <div class="form-card">
+          <div class="alert" id="sellAlert"></div>
+
+          <form id="sellForm" novalidate>
+            <div class="field-row">
+              <div class="field">
+                <label for="fname">Your name</label>
+                <input type="text" id="fname" placeholder="Ramesh Patel" required>
+              </div>
+              <div class="field">
+                <label for="phone">Mobile number</label>
+                <input type="tel" id="phone" placeholder="9876543210" maxlength="10" required>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="crop">Crop name</label>
+              <input type="text" id="crop" placeholder="Wheat, Paddy, Mustard..." required>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="qty">Quantity (quintal)</label>
+                <input type="number" id="qty" min="1" placeholder="120" required>
+              </div>
+              <div class="field">
+                <label for="price">Expected price (&#8377; per quintal)</label>
+                <input type="number" id="price" min="1" placeholder="2450" required>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="village">Village / district</label>
+                <input type="text" id="village" placeholder="Sanwer, Indore" required>
+              </div>
+              <div class="field">
+                <label for="state">State</label>
+                <select id="state" required>
+                  <option value="">Select state</option>
+                  <option>Andhra Pradesh</option>
+                  <option>Bihar</option>
+                  <option>Chhattisgarh</option>
+                  <option>Gujarat</option>
+                  <option>Haryana</option>
+                  <option>Karnataka</option>
+                  <option>Madhya Pradesh</option>
+                  <option>Maharashtra</option>
+                  <option>Punjab</option>
+                  <option>Rajasthan</option>
+                  <option>Tamil Nadu</option>
+                  <option>Telangana</option>
+                  <option>Uttar Pradesh</option>
+                  <option>West Bengal</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Add my listing</button>
+            <p class="form-note" style="margin-top:12px">
+              This demo stores listings in your browser only. Nothing is sent to a server.
+            </p>
+          </form>
+        </div>
+
+        <!-- Side info + my listings -->
+        <div>
+          <img src="images/paddy-field.jpg" alt="Farmer working in a paddy field"
+               style="border-radius:16px;margin-bottom:20px;box-shadow:var(--shadow)">
+
+          <h2 style="font-size:1.2rem">
+            My listings <span class="badge" id="listingCount">0 listings</span>
+          </h2>
+          <div id="myListings"></div>
+
+          <p class="form-note" style="margin-top:16px">
+            Tip: add the price you actually want. Dealers usually quote 2&ndash;4% below your ask,
+            so keep a small margin.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>&copy; <span id="year">2026</span> eFarmer &middot; A student demo project built with HTML, CSS and JavaScript.</div>
+      <nav>
+        <a href="market.html">Marketplace</a>
+        <a href="sell.html">Sell</a>
+        <a href="dealers.html">Dealers</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
