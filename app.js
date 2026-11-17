@@ -36,7 +36,7 @@ var PRODUCTS = [
     state: 'Madhya Pradesh',
     qty: 120,
     price: 2450,
-    img: 'images/grain-sieve.jpg',
+    img: 'grain-sieve.jpg',
     verified: true
   },
   {
@@ -48,7 +48,7 @@ var PRODUCTS = [
     state: 'Haryana',
     qty: 200,
     price: 3100,
-    img: 'images/paddy-field.jpg',
+    img: 'paddy-field.jpg',
     verified: true
   },
   {
@@ -60,7 +60,7 @@ var PRODUCTS = [
     state: 'Andhra Pradesh',
     qty: 80,
     price: 3400,
-    img: 'images/rice-grains.jpg',
+    img: 'rice-grains.jpg',
     verified: true
   },
   {
@@ -72,7 +72,7 @@ var PRODUCTS = [
     state: 'Gujarat',
     qty: 60,
     price: 2380,
-    img: 'images/wheat-hand.jpg',
+    img: 'wheat-hand.jpg',
     verified: false
   },
   {
@@ -84,7 +84,7 @@ var PRODUCTS = [
     state: 'Telangana',
     qty: 150,
     price: 2050,
-    img: 'images/grain-sieve.jpg',
+    img: 'grain-sieve.jpg',
     verified: true
   },
   {
@@ -96,7 +96,7 @@ var PRODUCTS = [
     state: 'Rajasthan',
     qty: 45,
     price: 5250,
-    img: 'images/grain-sieve.jpg',
+    img: 'grain-sieve.jpg',
     verified: false
   },
   {
@@ -108,7 +108,7 @@ var PRODUCTS = [
     state: 'Tamil Nadu',
     qty: 110,
     price: 2900,
-    img: 'images/rice-grains.jpg',
+    img: 'rice-grains.jpg',
     verified: true
   },
   {
@@ -120,7 +120,7 @@ var PRODUCTS = [
     state: 'Maharashtra',
     qty: 70,
     price: 5400,
-    img: 'images/wheat-hand.jpg',
+    img: 'wheat-hand.jpg',
     verified: true
   },
   {
@@ -132,7 +132,7 @@ var PRODUCTS = [
     state: 'Rajasthan',
     qty: 90,
     price: 2300,
-    img: 'images/grain-sieve.jpg',
+    img: 'grain-sieve.jpg',
     verified: false
   }
 ];

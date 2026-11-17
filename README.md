@@ -22,26 +22,26 @@ no build step. Just open the file or put it on GitHub Pages.
 ## Folder structure
 
 ```
-efarmer/
+eFarmer/          (all files flat, in the repo root)
 ├── index.html
 ├── market.html
 ├── sell.html
 ├── dealers.html
 ├── about.html
 ├── contact.html
-├── css/
-│   └── style.css
-├── js/
-│   └── app.js
-├── images/
-│   ├── hero-farmer.jpg
-│   ├── advisory.jpg
-│   ├── paddy-field.jpg
-│   ├── grain-sieve.jpg
-│   ├── rice-grains.jpg
-│   └── wheat-hand.jpg
+├── style.css
+├── app.js
+├── hero-farmer.jpg
+├── advisory.jpg
+├── paddy-field.jpg
+├── grain-sieve.jpg
+├── rice-grains.jpg
+├── wheat-hand.jpg
 └── README.md
 ```
+
+All files sit in the same folder, so every page links to `style.css`,
+`app.js` and the photos by plain filename (for example `hero-farmer.jpg`).
 
 ## Run it locally
 
@@ -62,8 +62,9 @@ python3 -m http.server 8000
 ## Put it on GitHub Pages (live link)
 
 1. Create a new repository on GitHub, for example `efarmer`.
-2. Upload the **contents** of this folder (not the folder itself) to the repo root.
-   `index.html` must sit at the top level.
+2. Upload **all 15 files** to the repo root, flat. Do not create `css/`, `js/`
+   or `images/` folders — the pages link to `style.css`, `app.js` and the photos
+   by plain filename.
    Or use git:
 
    ```bash
@@ -90,7 +91,7 @@ All internal links are relative, so the site works from a subfolder without any 
 
 ## Where to edit things
 
-**Products in the marketplace** — `js/app.js`, the `PRODUCTS` array near the top.
+**Products in the marketplace** — `app.js`, the `PRODUCTS` array near the top.
 Copy one block and change the values:
 
 ```js
@@ -103,26 +104,26 @@ Copy one block and change the values:
   state: 'Madhya Pradesh',
   qty: 75,
   price: 4600,
-  img: 'images/grain-sieve.jpg',
+  img: 'grain-sieve.jpg',
   verified: true
 }
 ```
 
-`id` must be unique. `img` must be a file inside the `images` folder.
+`id` must be unique. `img` must be a photo filename that exists in the repo root, e.g. `grain-sieve.jpg`.
 
-**Colours and spacing** — `css/style.css`, the `:root` block at the very top.
+**Colours and spacing** — `style.css`, the `:root` block at the very top.
 Change `--green` and `--green-dark` to re-theme the whole site.
 
 **Dealer directory** — edit the cards in `dealers.html`.
 
-**Contact email** — `js/app.js`, in `initContactForm()`: replace
+**Contact email** — `app.js`, in `initContactForm()`: replace
 `hello@efarmer.example` with your real address. Also update it in `contact.html`.
 
 ---
 
 ## How the JavaScript works (short version)
 
-`js/app.js` has small, separate functions, and every one is called at the bottom
+`app.js` has small, separate functions, and every one is called at the bottom
 inside `DOMContentLoaded`:
 
 - `initNav()` — opens and closes the mobile menu.
@@ -153,3 +154,21 @@ Each function starts with `if (!element) return;` so it is safe to load the same
 ## Credits
 
 Images are provided by the project owner. Code is free to use for learning.
+
+
+---
+
+## Troubleshooting on GitHub Pages
+
+**Page loads but looks like plain text, images broken.** The browser cannot find
+`style.css`, `app.js` or the photos. Check that those files sit in the repo root
+next to `index.html`, and that the filenames match exactly (Linux servers are
+case sensitive: `Style.css` will not load `style.css`).
+
+**404 page.** `index.html` must be at the repo root, not inside a subfolder.
+
+**Site not publishing.** Settings -> Pages must show Branch `main` and
+Folder `/ (root)`, and the repo must be public on a free account.
+
+**Changed a file but the live site is old.** Pages takes about a minute. Then
+hard refresh with Ctrl+Shift+R (or Cmd+Shift+R on Mac).
